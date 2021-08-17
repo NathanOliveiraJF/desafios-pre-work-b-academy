@@ -1,7 +1,7 @@
 import "./style.css";
 
 const app = document.querySelector("[data-js='app']");
-const alter = document.querySelector("[data-js='alter']");
+const alter = document.querySelector("[data-js='toggle']");
 
 app.innerHTML = `
   <h1>B. Academy</h1>
@@ -10,9 +10,7 @@ app.innerHTML = `
 
 alter.addEventListener("click", (event) => {
   event.preventDefault();
-  if (app.style.display === "none") {
-    app.style.display = "block";
-  } else {
-    app.style.display = "none";
-  }
+  app.style.display === "none"
+    ? (app.style.display = "block")
+    : (app.style.display = "none");
 });
