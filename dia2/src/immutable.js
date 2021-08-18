@@ -5,9 +5,11 @@ const john = {
   hobbies: ["Surf", "Design"],
 };
 
-const jane = { ...john, hobbies: [...john.hobbies] };
-jane.name = "Jane";
-jane.hobbies.push("MuayThai", "Programming");
+const jane = {
+  ...john,
+  hobbies: [...john.hobbies, "MuayThai", "Programming"],
+  name: "jane",
+};
 
 console.log("John:", john);
 console.log("Jane:", jane);
